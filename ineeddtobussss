@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hàng không vũ trụ Việt Nam</title>
+    <!-- Nhúng font chữ Orbitron từ Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Favicon hiển thị trên tab trình duyệt -->
+    <link rel="icon" type="image/png" href="https://static.wikia.nocookie.net/halo/images/c/c7/Noblelogo.png/revision/latest?cb=20100822152411">
+    <style>
+        /* Định dạng chung cho trang web */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Orbitron', sans-serif;
+            background: url('https://wallpapercave.com/wp/wp7503630.jpg') no-repeat center fixed;  /* Hình nền toàn trang, center fixed để cố định */
+            background-size: cover;
+            color: white;
+            text-align: center;
+            scroll-behavior: smooth; /* Cuộn mượt */
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 50px;
+        }
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h1 {
+            font-size: 4em;
+            opacity: 0;
+            animation: fadeIn 2s forwards; /*Hiệu ứng cho đoạn có hàm h1 */
+            display: inline;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        p {
+            font-size: 1.5em;
+            opacity: 0;
+            animation: fadeIn 3s forwards;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+        /* Định dạng cho nút bấm */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background: #e74c3c;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #c0392b;
+        }
+        /* Hộp tóm tắt nội dung bên trái */
+        .summary-box {
+            position: fixed;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .summary-box a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+            cursor: pointer;
+            text-align: left;
+        }
+        /* Accordion để hiển thị nội dung từng phần */
+        .accordion {
+            width: 80%;
+            margin: 20px auto;
+            text-align: left;
+        }
+        .accordion h2 {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .accordion-content {
+            display: none;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 2px;
+            text-shadow: 5px 5px 9px rgba(0, 0, 0, 0.548);
+            letter-spacing: 1.2px;
+        }
+        /* Hiệu ứng mờ dần khi trang tải */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+    <script>
+        function toggleAccordion(id, event) {
+            event.preventDefault(); // Ngăn chặn việc cuộn lên đầu trang
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+                content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Hộp tóm tắt nội dung giúp người dùng chuyển nhanh giữa các phần -->
+    <div class="summary-box">
+        <a href="#" onclick="toggleAccordion('hop1', event)">I. Tổng quát</a>
+        <a href="#" onclick="toggleAccordion('hop2', event)">II. Lịch sử</a>
+        <a href="#" onclick="toggleAccordion('hop3', event)">III. Chế tạo</a>
+        <a href="#" onclick="toggleAccordion('hop4', event)">IV. Việt Nam</a>
+    </div>
+    <div class="container">
+        <div class="title">
+            <h1>Hàng không vũ trụ</h1>
+        </div>
+        <p><em>"Hàng không vũ trụ, tiến tới tương lai"</em></p>
+    </div>
+    <div class="accordion">
+        <h2 onclick="toggleAccordion('hop1', event)">I. Tổng quát về hàng không vũ trụ</h2>
+        <div id="hop1" class="accordion-content">
+            <p>Hàng không vũ trụ là những nỗ lực của con người trong nghiên cứu khoa học, kỹ thuật và thương mại để bay được trong bầu khí quyển của Trái Đất (hàng không) và không gian bên ngoài (du hành vũ trụ). Các tổ chức hàng không vũ trụ nghiên cứu, thiết kế, sản xuất, vận hành hoặc bảo trì máy bay hoặc tàu vũ trụ. Hoạt động hàng không vũ trụ rất đa dạng với vô số ứng dụng thương mại, công nghiệp và quân sự.</p>
+            <p>Một số chương trình không gian được tài trợ qua thu thuế như:
+                <br><strong>Cơ quan Hàng không và Vũ trụ Quốc gia Hoa Kỳ (NASA)</strong> 
+                <br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/220px-NASA_logo.svg.png" alt="Placeholder Image">
+                <br><strong>Tổ chức Nghiên cứu Vũ trụ Ấn Độ (ISRO)</strong> 
+                <br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Indian_Space_Research_Organisation_Logo.svg/220px-Indian_Space_Research_Organisation_Logo.svg.png" alt="Placeholder Image">
+                <br><strong>Cơ quan Vũ trụ Liên bang Nga "Роскосмос"</strong> 
+                <br><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Roscosmos_logo_ru.svg/150px-Roscosmos_logo_ru.svg.png" alt="Placeholder Image" style="width:100%; max-width:220px ;"><img src="https://i.makeagif.com/media/1-14-2016/YYfK1P.gif" alt="Space GIF" style="width:100%; max-width:220px; display:inline-block;margin-left: 2px;">
+                <br><strong>Bộ Chỉ huy Không gian Liên Hợp Quốc (UNSC)</strong> 
+                <br><img src="https://static.wikia.nocookie.net/halofanon/images/f/fe/UNSC_navy2.png/revision/latest/scale-to-width-down/2000?cb=20120130194827" alt="Placeholder Image" style="width:100%; max-width:220px">
+                <!--br để xuống dòng, tối ưu hóa hơn p-->
+                <!--strong để làm đậm tên tổ chứca-->
+            </p>
+        </div>
+        
+        <h2 onclick="toggleAccordion('hop2', event)">II. Lịch sử của hàng không vũ trụ(Tóm tắt)</h2>
+        <div id="hop2" class="accordion-content">
+            <p>1. Lịch sử hàng không <strong>Thế Giới</strong>
+                <br>- Trước 1900: Con người thử nghiệm bay với khinh khí cầu (1783) và mô hình của Leonardo da Vinci.
+                <br>- 1903: Anh em nhà Wright thực hiện chuyến bay có động cơ đầu tiên.
+                <br>- Thế chiến I & II: Máy bay phát triển mạnh, xuất hiện máy bay phản lực.
+                <br>- Chiến tranh Lạnh: Máy bay siêu thanh, hàng không dân dụng bùng nổ (Boeing 707, Concorde).
+                <br>- Hiện đại: Phát triển máy bay thân rộng, thân thiện môi trường; bùng nổ hàng không vũ trụ tư nhân (SpaceX, Blue Origin).
+                <br><img src="https://kyluc.vn/Userfiles/Upload/images/1%20NASA.jpg" alt="Placeholder Image"style="width:100%; max-width:800px">
+            </p>
+            <p>2. Lịch sử hàng không <strong>Việt Nam</strong>
+                <br>- Trước 2008: Việt Nam phê duyệt chiến lược nghiên cứu và ứng dụng công nghệ vũ trụ (2006). Dự án vệ tinh siêu nhỏ PicoDragon được khởi động (2007).
+                <br>- 2008-2010: Viện Hàn lâm KH&CN VN xây dựng cơ sở hạ tầng CNVT tại Khu Công nghệ cao Hòa Lạc.
+                <br>- 2011-2015: Thành lập Trung tâm Vệ tinh Quốc gia (2011), khởi công Trung tâm Vũ trụ Việt Nam (2012). PicoDragon trở thành vệ tinh “Made in Vietnam” đầu tiên hoạt động trong không gian (2013). Việt Nam cử học viên sang Nhật Bản đào tạo chế tạo vệ tinh MicroDragon (2015).
+                <br>- 2016-2020: Hoàn thành các trung tâm nghiên cứu và ứng dụng CNVT tại Hà Nội, TP.HCM, Nha Trang. Tiếp nhận chuyển giao công nghệ vệ tinh quan sát trái đất sử dụng cảm biến radar (SAR).
+                <br><img src="https://special.nhandan.vn/nanodragon/assets/InpBoyMibr/a1-1908x1202.jpeg" alt="Placeholder Image"style="width:100%; max-width:800px">
+            </p>
+        </div>
+        
+        <h2 onclick="toggleAccordion('hop3', event)">III. Chế tạo và sản xuất</h2>
+        <div id="hop3" class="accordion-content">
+            <p>Động cơ tên lửa lỏng</p>
+            <iframe width="420" height="315" src="https://www.youtube.com/embed/9Y3fG-YrIII">
+            </iframe>
+            <!--Cú pháp iframe để cho link youtube nhưng phải chỉnh của thủ công "embed" để video hoạt động-->
+        </div>
+        
+        <h2 onclick="toggleAccordion('hop4', event)">IV. Ngành hàng không vũ trụ tại Việt Nam</h2>
+        <div id="hop4" class="accordion-content">
+            <p>Ngành hàng không vũ trụ Việt Nam có tiềm năng phát triển nhờ nhu cầu vận tải hàng không tăng cao, sự mở rộng của hệ sinh thái khởi nghiệp, hợp tác quốc tế mạnh mẽ và sự tiến bộ trong công nghệ vệ tinh. Chính phủ hỗ trợ thông qua chiến lược đến năm 2030, đầu tư vào R&D và liên kết với các tổ chức vũ trụ lớn. Trong tương lai, ngành sẽ tập trung vào phát triển vệ tinh quan sát Trái Đất, sản xuất linh kiện hàng không, ứng dụng AI, UAV, taxi bay và nghiên cứu du hành vũ trụ..</p>
+        </div>
+        <a href="https://vi.wikipedia.org/wiki/Hàng_không_vũ_trụ#" class="btn">Tìm hiểu thêm</a>
+    </div>
+</body>
+</html>
+
